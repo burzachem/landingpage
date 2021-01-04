@@ -131,17 +131,15 @@ background: white;
    padding: var(--main-padding);
 }
     .box{
-max-width: 100%;
-       
-         z-index: 0;
+width: 100%;
+ z-index: 0;
       
     }
     
    
 
     .box2{
-
-        width: 100%;
+width:100%;
          z-index: 0;
       
     }
