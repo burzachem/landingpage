@@ -26,14 +26,14 @@ body {
 
 nav {
      justify-self: center;
-background: blue;
+background: white;
   grid-area: nav;
   border-radius: var(--main-radius);
   padding: var(--main-padding);
 }
 
 main {
-   background: blue;
+background: white;
   grid-area: main;
  padding-top: 0;
   border-radius: var(--main-radius);
@@ -41,8 +41,9 @@ main {
   text-align: center;
 }
 
-#sidebar {
-  background: blue;
+#content11 {
+    margin-left: 50px;
+background: white;
    padding-top: 0;
   text-transform: uppercase;
   font-size: 12px;
@@ -53,30 +54,31 @@ main {
 
 #content1 {
    padding-top: 0; 
-background: blue;
+background: white;
   grid-area: content1;
   border-radius: var(--main-radius);
   padding: var(--main-padding);
 }
 
 #content2 {
- background: blue;
-  
+background: white;
+  z-index: 1;
+
   grid-area: content2;
   border-radius: var(--main-radius);
    padding: var(--main-padding);
 }
 
 #content3 {
- background: blue;
+background: white;
   grid-area: content3;
-   
+ 
   border-radius: var(--main-radius);
    padding: var(--main-padding);
 }
 
 footer {
-background: blue;
+background: white;
   grid-area: footer;
   border-radius: var(--main-radius);
   padding: var(--main-padding);
@@ -106,28 +108,48 @@ a {
   }
     
   
-    
+  iframe{
+  width: 100%;
+
+
+}  
       
-#sidebar {
-background: blue;
-width: 100%;
-  grid-area: sidebar;
-  border-radius: var(--main-radius);
-   padding: var(--main-padding);
-}
+
      
     
     #content1 {
     
-   background: blue;
+background: white;
   grid-area: content1;
   border-radius: var(--main-radius);
    padding: var(--main-padding);
 }
     footer {
-background: blue;
+background: white;
   grid-area: footer;
   border-radius: var(--main-radius);
    padding: var(--main-padding);
 }
+    .box{
+max-width: 100%;
+       
+         z-index: 0;
+      
+    }
+    
+   
+
+    .box2{
+
+        width: 100%;
+         z-index: 0;
+      
+    }
+        .box3{
+          width: 100%;
+         z-index: 0;
+            background-color: gainsboro;
+            float:right;
+      
+    }
 }
