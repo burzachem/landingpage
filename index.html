@@ -147,7 +147,10 @@ margin-top: -4px;
     
     
     
+   
+
     
+
     
     
     
@@ -258,13 +261,47 @@ Ingresa el cupón 058978 para acceder a descuento
         </ul>
       
          
-         <div id="checkout" class="checkout">
          
-         </div>
-         <script src="https://www.paypal.com/sdk/js?client-id=Ab3R-BPrHb_yK4BExaOiv0urHulyMFAeEXSx5eeHS0826-NvPDPTNtl0fAhBTnHXRvD0ioSsRIRCSjUq"></script> <script>paypal.Buttons().render('#checkout');</script>
-        
-       <!-- 
+         
+         <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Ab3R-BPrHb_yK4BExaOiv0urHulyMFAeEXSx5eeHS0826-NvPDPTNtl0fAhBTnHXRvD0ioSsRIRCSjUq&currency=MXN"></script>
+         
+         
+         
+         
+         
+         
+         
+         <div id="checkout" class="checkout"> </div>
+   
+         
 
+        
+    <script>paypal.Buttons({
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '2500.00'
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+
+
+        }).render('#checkout');</script>
+        
+      <!-- 
+ 
    <a onclick="return false;" href="https://pay.hotmart.com/X45387516H?checkoutMode=2" class="hotmart-fb hotmart__button-checkout">Buy now</a> 
 
 
